@@ -1,0 +1,82 @@
+:root {
+  --bg:#07060a;
+  --card:#0f0f13;
+  --muted:#13ff03;
+  --accent1:#13ff03;
+  --accent2:#098300;
+  font-family: Inter, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#e6eef8;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{position:sticky;top:0;background:rgba(7,6,10,0.9);z-index:100;backdrop-filter:blur(6px)}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{color:#fff;text-decoration:none;font-weight:700}
+.logo .dot{color:var(--accent2)}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none}
+.nav-link.active,.nav-link:hover{color:#fff}
+.btn-cv{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:6px 12px;border-radius:8px;color:#000;font-weight:600;text-decoration:none}
+.burger{display:none;background:none;border:0;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0}
+
+/* Hero */
+.hero{padding:4rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 350px;gap:2rem;align-items:center}
+.eyebrow{color:var(--accent1)}
+.hero h1{font-size:2.5rem}
+.role{color:var(--muted);margin-bottom:10px}
+.lead{color:#ccc}
+.home-cta{margin:1rem 0;display:flex;gap:1rem}
+.btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#000;padding:8px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+.btn.ghost{background:none;border:1px solid #444;color:var(--muted)}
+.btn.small{font-size:0.85rem;padding:6px 10px}
+.socials{margin-top:1rem;display:flex;gap:1rem}
+.socials a{color:var(--muted);text-decoration:none}
+
+/* Profile Card */
+.profile-card{padding:1rem;border:1px solid rgba(255,255,255,0.1);border-radius:12px;background:var(--card);text-align:center}
+.profile-photo{width:180px;height:180px;margin:0 auto 1rem;border-radius:50%;overflow:hidden;border:3px solid var(--accent1)}
+.profile-photo img{width:100%;height:100%;object-fit:cover}
+.profile-info .muted{color:var(--muted);font-size:0.9rem}
+.profile-actions{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem}
+
+/* Sections */
+.section{padding:3rem 0}
+.section-title{margin-bottom:1rem;font-size:1.5rem}
+.list{list-style:none;margin-top:1rem}
+.list li{margin-bottom:0.5rem;color:#ccc}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.skill-card{padding:1rem;border:1px solid rgba(255,255,255,0.1);border-radius:10px;background:var(--card)}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.project{background:var(--card);padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1)}
+.project-thumb{height:160px;border-radius:8px;background:linear-gradient(90deg,var(--accent1),var(--accent2));opacity:0.15;transition:all 0.4s ease;background-size:cover;background-position:center}
+.project-body{margin-top:0.5rem}
+.link{color:var(--accent1);text-decoration:none;font-weight:600}
+
+/* Hover images */
+.project.uiux:hover .project-thumb{background-image:url("uiux.png");opacity:1}
+.project.frontend:hover .project-thumb{background-image:url("frontend.png");opacity:1}
+.project.editor:hover .project-thumb{background-image:url("editor.png");opacity:1}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 280px;gap:1.5rem}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border-radius:6px;border:1px solid #444;background:transparent;color:#fff;margin-top:0.3rem}
+.form-actions{margin-top:0.5rem;display:flex;gap:0.5rem}
+#formStatus{margin-top:0.5rem;color:var(--accent1)}
+
+/* Footer */
+.site-footer{padding:1rem 0;text-align:center;color:#999;font-size:0.9rem}
+
+/* Responsive */
+@media (max-width:768px){
+  .hero-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none;flex-direction:column;background:#111;padding:1rem;position:absolute;top:60px;right:0;left:0}
+  .nav.show{display:flex}
+  .burger{display:block}
+}
