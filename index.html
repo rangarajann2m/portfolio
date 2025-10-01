@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | RANGARAJAN S</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="logo">RANGARAJAN S</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="home-section">
+    <!-- Left Side -->
+    <div class="home-text">
+      <h1>Hi, I'm <span>Rangarajan S</span></h1>
+      <h2>I'm a <span class="role" id="role"></span></h2>
+      <p>I craft intuitive and user-friendly UI/UX designs that transform ideas into engaging digital experiences.</p>
+
+      <!-- Buttons -->
+      <div class="home-buttons">
+        <a href="cvranga (1).pdf" class="btn" download>Download CV</a>
+        <a href="contact.html" class="btn">Hire Me</a>
+        <a href="projects.html" class="btn">View Projects</a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/rangarajan_n2m/" target="_blank">
+          <i class="fab fa-instagram"></i>Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/rangarajan-s-300747292/" target="_blank">
+          <i class="fab fa-linkedin"></i>LinkedIn
+        </a>
+        <a href="mailto:rangarajann2m@gmail.com">
+          <i class="fas fa-envelope"></i>E-Mail
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="home-profile">
+      <img src="passport.jpeg.png" alt="Rangarajan Profile">
+    </div>
+  </section>
+
+  <!-- Script for Role Rotation -->
+  <script>
+    const roles = ["Designer", "Frontend Developer", "Editor"];
+    let roleIndex = 0;
+    const roleElement = document.getElementById("role");
+
+    function changeRole() {
+      roleElement.textContent = roles[roleIndex];
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    changeRole();
+    setInterval(changeRole, 2400); // 2.4s interval like animation
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

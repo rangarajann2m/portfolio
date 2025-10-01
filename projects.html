@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | RANGARAJAN S</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="logo">RANGARAJAN S</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      
+      <!-- UI/UX Project -->
+      <div class="project-card" id="uiux-project">
+        <img src="uiux.png" alt="UI/UX Project" class="project-img">
+        <h3>Sticky-Notes</h3>
+        <p>A clean and modern UI/UX website designed with Figma & HTML/CSS.</p>
+        <a href="https://www.figma.com/proto/4EwbajnjWSb0vtCYPTCGj8/Sticky-Notes?node-id=0-1&t=N3g7HCElGLs2i5OX-1" target="_blank" class="btn orange">Read More</a>
+      </div>
+
+      <!-- Frontend Project -->
+      <div class="project-card" id="frontend-project">
+        <img src="frontend.png" alt="Frontend Project" class="project-img">
+        <h3>Perfume</h3>
+        <p>Responsive portfolio site built using HTML, CSS, and JavaScript.</p>
+        <a href="https://rangarajann2m.neocities.org/event/event" target="_blank" class="btn orange">Read More</a>
+      </div>
+
+      <!-- Editor Project -->
+      <div class="project-card" id="editor-project">
+        <img src="editor.png" alt="Editor Project" class="project-img">
+        <h3>Semicolon</h3>
+        <p>Showcase of video editing — smooth cuts, grading, motion graphics.</p>
+        <a href="https://youtu.be/_OE3qUA5AGc?si=cfUMwqpPxr-0WaQY" target="_blank" class="btn orange">Read More</a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Check URL for #uiux-project highlight
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.location.hash === "#uiux-project") {
+        document.querySelector("#uiux-project").classList.add("highlight");
+      }
+      if (window.location.hash === "#frontend-project") {
+        document.querySelector("#frontend-project").classList.add("highlight");
+      }
+      if (window.location.hash === "#editor-project") {
+        document.querySelector("#editor-project").classList.add("highlight");
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
